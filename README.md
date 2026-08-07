@@ -53,10 +53,7 @@ docker compose -f docker/docker-compose.yml up -d && python3 -m venv venv_prueba
 ### 1. Levantar la Infraestructura (Docker)
 Tener Docker Desktop ejecutandos, ejecutar en la terminal.
 
-"
-cd docker
 docker compose up -d
-"
 
 ### 2. Preparar el Entorno de Python e Instalar Dependencias
 
