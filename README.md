@@ -88,7 +88,7 @@ python scripts/cliente2.py
 
 - Terminal 5 (Dashboard de Monitoreo):
 
-  streamlit run dashboard.py
+  streamlit run scripts/dashboard.py
 
 
 ### 📊 Acceso a Dashboards
