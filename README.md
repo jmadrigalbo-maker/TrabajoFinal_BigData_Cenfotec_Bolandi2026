@@ -1,10 +1,10 @@
 # 📊 Sistema de Análisis de Sentimiento en Tiempo Real (Big Data)
 
-Este proyecto implementa una arquitectura end-to-end en streaming para la ingesta, almacenamiento, procesamiento con Inteligencia Artificial (Procesamiento del Lenguaje Natural) y visualización interactiva en tiempo real de tweets y opiniones de usuarios.
+Este proyecto es una arquitectura end-to-end en streaming para la ingesta, almacenamiento, procesamiento con IA y visualización interactiva en tiempo real de tweets y opiniones de usuarios.
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 - **Ingesta y Mensajería:** Apache Kafka (Producer / Consumer)
 - **Data Lake (Datos Crudos):** MongoDB
@@ -36,13 +36,29 @@ proyectoFinal-bigdata-twitter/
 
 ## 🚀 Guía de Instalación y Ejecución
 
+### Instalacion desde gitbub
+Abrie en la terminal el siguiente codigo
+
+git clone https://github.com/TU_USUARIO/TrabajoFinal_BigData_Cenfotec_Bolandi2026.git
+
+# Luego entrar a la carpeta ejecutando
+
+cd TrabajoFinal_BigData_Cenfotec_Bolandi2026
+
+Luego seguir pasos de instalacion
+
+### Instalacion desde el ZIP empezar desde aca.
+## Para hacer paso 1 y 2 a la vez ejecutar
+
+docker compose -f docker/docker-compose.yml up -d && python3 -m venv venv_prueba && source venv_prueba/bin/activate && pip install -r requirements.txt
+
+
 ### 1. Levantar la Infraestructura (Docker)
-Asegúrate de tener Docker Desktop iniciado y ejecuta:
+ Docker Desktop iniciado  y ejecutando
 
 cd docker
 docker compose up -d
 
-(Espera unos 10-15 segundos mientras se inician Kafka, MongoDB y MySQL).
 
 ### 2. Preparar el Entorno de Python e Instalar Dependencias
 
@@ -52,24 +68,21 @@ python3 -m venv venv
 # Activar el entorno (Mac/Linux)
 source venv/bin/activate
 
-# Activar el entorno (Windows - PowerShell)
-# .\venv\Scripts\activate
-
 # Instalar librerías
 pip install -r requirements.txt
 
-### 3. Ejecución del Pipeline en Tiempo Real
-Abre 4 terminales independientes en VS Code, activa el entorno (source ../venv/bin/activate) en cada una y ejecuta los siguientes comandos en orden:
+### 3. Ejecución del Pipeline 
+Abrir  4 terminales independientes en VS Code, activar el entorno (source ../venv/bin/activate) en cada una y ejecutr
 
-- Terminal 1 (Producer / Ingesta):
+- Terminal 1 (Cliente/productor):
   cd scripts
   python cliente.py
 
-- Terminal 2 (Consumer / Data Lake):
+- Terminal 2 (Consumer):
   cd scripts
   python consumer.py
 
-- Terminal 3 (Procesador IA / Data Warehouse):
+- Terminal 3 (Procesador IA):
   cd scripts
   python processor.py
 
@@ -81,11 +94,13 @@ Abre 4 terminales independientes en VS Code, activa el entorno (source ../venv/b
 
 ## 🛠️ Herramientas de Utilidad
 
-- Reiniciar la base de datos a cero (Limpieza antes de una prueba):
+- Reiniciar la base de datos a cero 
+
   cd scripts
   python reset_db.py
 
 - Exportar los datos analizados a un reporte de Excel:
+
   cd scripts
   python export_to_excel.py
 
