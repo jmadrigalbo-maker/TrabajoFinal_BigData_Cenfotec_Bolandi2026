@@ -70,24 +70,24 @@ pip install -r requirements.txt
 Abrir 5 terminales independientes en VS Code, activando siempre el entorno (source venv/bin/activate) en cada una y ejecutando los siguientes comandos en orden:
 
 - Terminal 1 (Producer /cliente):
-  cd scripts
-  python cliente1.py
+
+python scripts/cliente1.py 
 
   - Terminal 2 (Producer /cliente):
-  cd scripts
-  python cliente2.py
+
+python scripts/cliente2.py 
 
 
 - Terminal 3 (Consumer / Data Lake):
-  cd scripts
-  python consumer.py
+ 
+  python scripts/consumer.py
 
 - Terminal 4 (Procesador IA / Data Warehouse):
-  cd scripts
-  python processor.py
+
+  python scripts/processor.py
 
 - Terminal 5 (Dashboard de Monitoreo):
-  cd scripts
+
   streamlit run dashboard.py
 
 
@@ -99,12 +99,12 @@ Abrir 5 terminales independientes en VS Code, activando siempre el entorno (sour
 ## 🛠️ Herramientas de Utilidad
 
 - Reiniciar la base de datos a cero (Limpieza antes de una prueba):
-  cd scripts
-  python reset_db.py
+
+  python scripts/reset_db.py
 
 - Exportar los datos analizados a un reporte de Excel:
-  cd scripts
-  python export_to_excel.py
+
+  python scripts/export_to_excel.py
 
   
 
