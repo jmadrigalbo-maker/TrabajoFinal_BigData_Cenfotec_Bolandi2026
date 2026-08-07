@@ -48,7 +48,7 @@ cd TrabajoFinal_BigData_Cenfotec_Bolandi2026
 # ***DEsde el ZIP**
 
 # *Para compactar Paso 1 y 2 ejecutar
-docker compose -f docker/docker-compose.yml up -d && python3 -m venv venv_prueba && source venv_prueba/bin/activate && pip install -r requirements.txt
+docker compose -f docker/docker-compose.yml up -d && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 
 ### 1. Levantar la Infraestructura (Docker)
 Tener Docker Desktop ejecutandos, ejecutar en la terminal.
