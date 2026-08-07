@@ -1,0 +1,9 @@
+kafka_python==3.0.10
+kagglehub==1.0.2
+pandas==3.0.5
+plotly==6.9.0
+pymongo==4.17.0
+pymysql==1.2.0
+streamlit==1.61.1
+torch==2.13.0
+transformers==5.14.1
